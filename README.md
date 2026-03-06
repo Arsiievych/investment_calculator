@@ -1,59 +1,64 @@
-# InvestmentCalculator
+# Investment Calculator
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.5.
+A simple Angular app that projects investment growth over time with a clean dark-green UI.
 
-## Development server
+## Screenshots
+### Empty state (before calculation)
+![Empty state](docs/screenshots/screenshot1.png)
 
-To start a local development server, run:
+### Results state (after calculation)
+![Results](docs/screenshots/screenshot2.png)
 
+## How to Run
+### Prerequisites
+- Node.js 20+ (or latest LTS)
+- npm
+
+### Install dependencies
 ```bash
-ng serve
+npm install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### Start development server
 ```bash
-ng generate component component-name
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Open: `http://localhost:4200/`
 
+### Build for production
 ```bash
-ng generate --help
+npm run build
 ```
 
-## Building
-
-To build the project run:
-
+### Run tests
 ```bash
-ng build
+npm test
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## General Logic
+The calculator uses yearly compounding with annual contributions:
 
-## Running unit tests
+1. Start with `initialInvestment`.
+2. For each year:
+   - Calculate yearly interest from current portfolio value:
+     - `interestYear = investmentValue * (expectedReturn / 100)`
+   - Add interest and annual contribution:
+     - `investmentValue += interestYear + annualInvestment`
+   - Track invested capital:
+     - `investedCapital = initialInvestment + (annualInvestment * year)`
+   - Track total earned interest:
+     - `totalInterest = investmentValue - investedCapital`
+3. Display each year as one row in the results table.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Main Features
+- 4 input fields: initial investment, annual investment, expected return, duration
+- Input validation with inline error states
+- Empty-state banner when no calculation is submitted yet
+- Results table with yearly breakdown
+- Responsive layout
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Tech Stack
+- Angular 21
+- TypeScript
+- Template-driven forms (`ngModel`)
