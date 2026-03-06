@@ -5,3 +5,5 @@ export interface InvestmentOutputModel {
     totalInterest: number;
     investedCapital: number;
 }
+
+export type InvestmentOutputModelArray = InvestmentOutputModel[];
