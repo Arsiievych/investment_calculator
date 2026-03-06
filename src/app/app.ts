@@ -21,5 +21,4 @@ export class App {
   onInputSubmit(investmentInput: InvestmentInputModel) {
     this.investmentInputModel = investmentInput;
   }
-
 }

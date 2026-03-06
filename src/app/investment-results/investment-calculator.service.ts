@@ -16,7 +16,7 @@ export class InvestmentCalculatorService {
 
         for (let i = 0; i < investmentInput.duration; i++) {
             const year = i + 1;
-            const interestEarnedInYear = investmentValue * (investmentInput.expectedReturn / 100);
+            const interestEarnedInYear = investmentValue * (investmentInput.expectedReturn / 100.0);
             investmentValue += interestEarnedInYear + investmentInput.annualInvestment;
             const investedCapital = investmentInput.initialInvestment + investmentInput.annualInvestment * year;
             const totalInterest = investmentValue - investedCapital;
