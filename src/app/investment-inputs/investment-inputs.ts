@@ -9,14 +9,23 @@ import {InvestmentInputModel} from "./investment-input.model";
     styleUrl: './investment-inputs.css',
 })
 export class InvestmentInputs {
-    initialInvestment = 0;
-    annualInvestment = 0;
-    expectedReturn = 0;
-    duration = 0;
+    initialInvestment: number | null = null;
+    annualInvestment: number | null = null;
+    expectedReturn: number | null = null;
+    duration: number | null = null;
 
     @Output() inputChanged = new EventEmitter<InvestmentInputModel>();
 
     onSubmit() {
+        if (
+            this.initialInvestment === null ||
+            this.annualInvestment === null ||
+            this.expectedReturn === null ||
+            this.duration === null
+        ) {
+            return;
+        }
+
         this.inputChanged.emit({
             initialInvestment: this.initialInvestment,
             annualInvestment: this.annualInvestment,
