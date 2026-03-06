@@ -1,16 +1,16 @@
-<form>
+<form (ngSubmit)="onSubmit()">
     <div class="input-group">
         <div class="field">
             <label for="initial-investment">Initial Investment</label>
             <div class="input-wrapper">
-                <input type="number" id="initial-investment" name="initialInvestment" placeholder="0">
+                <input type="number" id="initial-investment" name="initialInvestment" placeholder="0" min="0" [(ngModel)]="initialInvestment">
                 <span class="suffix">$</span>
             </div>
         </div>
         <div class="field">
             <label for="annual-investment">Annual Investment</label>
             <div class="input-wrapper">
-                <input type="number" id="annual-investment" name="annualInvestment" placeholder="0">
+                <input type="number" id="annual-investment" name="annualInvestment" placeholder="0" min="0" [(ngModel)]="annualInvestment">
                 <span class="suffix">$</span>
             </div>
         </div>
@@ -19,14 +19,14 @@
         <div class="field">
             <label for="expected-return">Expected Return</label>
             <div class="input-wrapper">
-                <input type="number" id="expected-return" name="expectedReturn" step="0.1" placeholder="0">
+                <input type="number" id="expected-return" name="expectedReturn" step="0.1" placeholder="0" min="0" [(ngModel)]="expectedReturn">
                 <span class="suffix">%</span>
             </div>
         </div>
         <div class="field">
             <label for="duration">Duration</label>
             <div class="input-wrapper suffix-long">
-                <input type="number" id="duration" name="duration" placeholder="0">
+                <input type="number" id="duration" name="duration" placeholder="0" min="0" [(ngModel)]="duration">
                 <span class="suffix">years</span>
             </div>
         </div>
