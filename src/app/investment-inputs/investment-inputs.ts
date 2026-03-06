@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-investment-inputs',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './investment-inputs.html',
   styleUrl: './investment-inputs.css',
 })
