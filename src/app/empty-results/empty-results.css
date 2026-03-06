@@ -1,0 +1,35 @@
+:host {
+    display: block;
+    padding: 0 1rem 2rem;
+}
+
+.empty-banner {
+    max-width: 42rem;
+    margin: 1.2rem auto 0;
+    padding: 1.2rem 1.25rem;
+    border-radius: 1rem;
+    border: 1px dashed rgba(179, 255, 214, 0.36);
+    background: linear-gradient(160deg, rgba(10, 54, 38, 0.86), rgba(4, 25, 18, 0.92));
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.empty-banner h2 {
+    margin: 0 0 0.45rem;
+    color: #eafff2;
+    font-size: 1.02rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.empty-banner p {
+    margin: 0;
+    color: #ccefdc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.empty-banner strong {
+    color: #bafedc;
+    font-weight: 700;
+}

@@ -5,10 +5,11 @@ import {InvestmentResults} from "./investment-results/investment-results";
 import {InvestmentInputModel} from "./investment-inputs/investment-input.model";
 import {InvestmentCalculatorService} from "./investment-results/investment-calculator.service";
 import {InvestmentOutputModelArray} from "./investment-results/investment-output.model";
+import {EmptyResults} from "./empty-results/empty-results";
 
 @Component({
   selector: 'app-root',
-  imports: [Header, InvestmentInputs, InvestmentResults],
+  imports: [Header, InvestmentInputs, InvestmentResults, EmptyResults],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

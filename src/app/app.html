@@ -2,4 +2,6 @@
 <app-investment-inputs (inputChanged)="onInputSubmit( $event )"/>
 @if (investmentResults.length > 0) {
     <app-investment-results [investmentResults] = "investmentResults"/>
+} @else {
+    <app-empty-results/>
 }
