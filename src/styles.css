@@ -1,12 +1,51 @@
+:root {
+    --money-green-deep: #041f16;
+    --money-green-mid: #0b3a2b;
+    --money-green-rich: #14613f;
+    --money-green-soft: #1f7f56;
+    --money-text: #ecfff3;
+    --money-text-soft: #c9ecd9;
+    --money-text-accent: #b3ffd6;
+}
+
 * {
     box-sizing: border-box;
 }
 
+html,
+body {
+    min-height: 100%;
+}
+
 body {
     font-family: "Poppins", sans-serif;
-    background: radial-gradient(circle at top left, #83e6c0, #83e6c0);
-    color: #000000;
     margin: 0;
     padding: 0;
-    height: 100%;
+    color: var(--money-text);
+    background-color: var(--money-green-deep);
+    background-image:
+        radial-gradient(circle at 12% 18%, rgba(56, 172, 113, 0.35), transparent 40%),
+        radial-gradient(circle at 86% 12%, rgba(30, 113, 75, 0.45), transparent 36%),
+        linear-gradient(135deg, var(--money-green-deep) 0%, var(--money-green-mid) 45%, var(--money-green-rich) 100%),
+        repeating-linear-gradient(25deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 11px);
+    background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--money-text);
+}
+
+p,
+li,
+label {
+    color: var(--money-text-soft);
+}
+
+a {
+    color: var(--money-text-accent);
 }

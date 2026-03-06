@@ -4,12 +4,23 @@ header {
 }
 
 header img {
-    width: 5rem;
-    height: 5rem;
+    width: 6.25rem;
+    height: 6.25rem;
+    padding: 0.45rem;
     object-fit: contain;
-    background-color: transparent;
+    border-radius: 1rem;
+    border: 1px solid rgba(179, 255, 214, 0.45);
+    background:
+        radial-gradient(circle at 30% 30%, rgba(179, 255, 214, 0.22), rgba(20, 97, 63, 0.18) 56%, rgba(4, 31, 22, 0.08));
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35),
+        0 0 24px rgba(47, 183, 124, 0.3);
+    filter: saturate(1.08) brightness(1.06);
 }
 
 header h1 {
     font-size: 1.5rem;
+    color: #eafff2;
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    letter-spacing: 0.04em;
 }
