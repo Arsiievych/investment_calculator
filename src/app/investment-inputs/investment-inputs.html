@@ -1,1 +1,35 @@
-<p>investment-inputs works!</p>
+<form>
+    <div class="input-group">
+        <div class="field">
+            <label for="initial-investment">Initial Investment</label>
+            <div class="input-wrapper">
+                <input type="number" id="initial-investment" name="initialInvestment" placeholder="0">
+                <span class="suffix">$</span>
+            </div>
+        </div>
+        <div class="field">
+            <label for="annual-investment">Annual Investment</label>
+            <div class="input-wrapper">
+                <input type="number" id="annual-investment" name="annualInvestment" placeholder="0">
+                <span class="suffix">$</span>
+            </div>
+        </div>
+    </div>
+    <div class="input-group">
+        <div class="field">
+            <label for="expected-return">Expected Return</label>
+            <div class="input-wrapper">
+                <input type="number" id="expected-return" name="expectedReturn" step="0.1" placeholder="0">
+                <span class="suffix">%</span>
+            </div>
+        </div>
+        <div class="field">
+            <label for="duration">Duration</label>
+            <div class="input-wrapper suffix-long">
+                <input type="number" id="duration" name="duration" placeholder="0">
+                <span class="suffix">years</span>
+            </div>
+        </div>
+    </div>
+    <button type="submit">Calculate</button>
+</form>

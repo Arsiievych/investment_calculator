@@ -1,0 +1,120 @@
+:host {
+    display: block;
+    padding: 0 1rem 2rem;
+}
+
+form {
+    max-width: 42rem;
+    margin: 2rem auto 0;
+    padding: 1.4rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(179, 255, 214, 0.22);
+    background: linear-gradient(160deg, rgba(12, 62, 44, 0.88), rgba(5, 31, 22, 0.9));
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(6px);
+}
+
+.input-group {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-group:last-of-type {
+    margin-bottom: 1.2rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.field label {
+    display: block;
+    color: #d7f9e6;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.field input {
+    width: 100%;
+    padding: 0.68rem 2.6rem 0.68rem 0.75rem;
+    border: 1px solid rgba(179, 255, 214, 0.35);
+    border-radius: 0.6rem;
+    background-color: rgba(2, 16, 11, 0.46);
+    color: #ecfff3;
+    font-size: 0.98rem;
+    transition: border-color 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
+}
+
+.input-wrapper.suffix-long input {
+    padding-right: 4.2rem;
+}
+
+.field input:focus {
+    outline: none;
+    border-color: rgba(179, 255, 214, 0.8);
+    box-shadow: 0 0 0 3px rgba(81, 201, 148, 0.22);
+    background-color: rgba(5, 26, 18, 0.78);
+}
+
+.field input::placeholder {
+    color: rgba(210, 244, 225, 0.52);
+}
+
+.suffix {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem;
+    transform: translateY(-50%);
+    color: rgba(185, 250, 218, 0.74);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    pointer-events: none;
+}
+
+.input-wrapper:focus-within .suffix {
+    color: #c9ffe3;
+}
+
+button {
+    width: 100%;
+    padding: 0.78rem 1rem;
+    border: 1px solid rgba(179, 255, 214, 0.42);
+    border-radius: 0.7rem;
+    background: linear-gradient(180deg, #aef8d5, #7be3b7);
+    color: #04281a;
+    font-size: 0.88rem;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.28);
+    filter: brightness(1.03);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+    .input-group {
+        grid-template-columns: 1fr;
+    }
+}
