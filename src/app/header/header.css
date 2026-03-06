@@ -17,11 +17,13 @@
     object-fit: contain;
     display: block;
     filter:
-        saturate(1.06)
-        brightness(1.03)
-        contrast(1.03)
-        drop-shadow(0 8px 16px rgba(0, 0, 0, 0.34))
-        drop-shadow(0 0 20px rgba(70, 190, 140, 0.2));
+        saturate(1.08)
+        brightness(1.2)
+        contrast(1.02)
+        drop-shadow(0 10px 24px rgba(0, 0, 0, 0.38))
+        drop-shadow(0 3px 10px rgba(8, 46, 32, 0.34))
+        drop-shadow(0 0 14px rgba(97, 231, 174, 0.24))
+        drop-shadow(0 0 30px rgba(27, 121, 84, 0.22));
 }
 
 .app-header h1 {
