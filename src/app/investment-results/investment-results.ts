@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {InvestmentInputModel} from "../investment-inputs/investment-input.model";
-import {InvestmentCalculatorService} from "./investment-calculator.service";
+import {InvestmentOutputModelArray} from "./investment-output.model";
 
 @Component({
   selector: 'app-investment-results',
@@ -9,11 +8,5 @@ import {InvestmentCalculatorService} from "./investment-calculator.service";
   styleUrl: './investment-results.css',
 })
 export class InvestmentResults {
-  @Input({required: true}) investmentInputModel!: InvestmentInputModel;
-
-  constructor(private investmentCalculatorService: InvestmentCalculatorService) {}
-
-  investmentResults() {
-    return this.investmentCalculatorService.calculateInvestmentResults(this.investmentInputModel);
-  }
+  @Input({required: true}) investmentResults!: InvestmentOutputModelArray;
 }

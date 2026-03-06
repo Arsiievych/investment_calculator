@@ -12,7 +12,7 @@
             </tr>
             </thead>
             <tbody>
-            @for (row of investmentResults(); track row.year) {
+            @for (row of investmentResults; track row.year) {
                 <tr>
                     <td>{{row.year}}</td>
                     <td class="num">${{ row.investedCapital.toFixed(2) }}</td>

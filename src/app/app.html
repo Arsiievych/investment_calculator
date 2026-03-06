@@ -1,3 +1,5 @@
 <app-header/>
 <app-investment-inputs (inputChanged)="onInputSubmit( $event )"/>
-<app-investment-results [investmentInputModel] = "investmentInputModel"/>
+@if (investmentResults.length > 0) {
+    <app-investment-results [investmentResults] = "investmentResults"/>
+}
