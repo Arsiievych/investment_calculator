@@ -1,15 +1,22 @@
-import {Component, Input} from '@angular/core';
-import {InvestmentOutputModelArray} from "./investment-output.model";
+import {Component} from '@angular/core';
 import {CurrencyPipe} from "@angular/common";
+import {InvestmentCalculatorService} from "./investment-calculator.service";
+import {EmptyResults} from "../empty-results/empty-results";
 
 @Component({
-  selector: 'app-investment-results',
-  imports: [
-    CurrencyPipe
-  ],
-  templateUrl: './investment-results.html',
-  styleUrl: './investment-results.css',
+    selector: 'app-investment-results',
+    imports: [
+        CurrencyPipe,
+        EmptyResults
+    ],
+    templateUrl: './investment-results.html',
+    styleUrl: './investment-results.css',
 })
 export class InvestmentResults {
-  @Input({required: true}) investmentResults!: InvestmentOutputModelArray;
+    constructor(private investmentCalculatorService: InvestmentCalculatorService) {
+    }
+
+    get investmentResultsData() {
+        return this.investmentCalculatorService.resultData;
+    }
 }

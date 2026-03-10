@@ -5,12 +5,10 @@ import {InvestmentOutputModelArray} from "./investment-output.model";
 @Injectable({providedIn: 'root'})
 export class InvestmentCalculatorService {
 
-    calculateInvestmentResults(investmentInput: InvestmentInputModel): InvestmentOutputModelArray {
-        const investmentResults: InvestmentOutputModelArray = [];
+    resultData ?: InvestmentOutputModelArray
 
-        if (investmentInput.duration <= 0) {
-            return investmentResults;
-        }
+    calculateInvestmentResults(investmentInput: InvestmentInputModel): void {
+        const investmentResults: InvestmentOutputModelArray = [];
 
         let investmentValue = investmentInput.initialInvestment;
 
@@ -30,6 +28,6 @@ export class InvestmentCalculatorService {
             });
         }
 
-        return investmentResults;
+        this.resultData = investmentResults;
     }
 }
