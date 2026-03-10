@@ -14,7 +14,7 @@ export class InvestmentInputs {
     expectedReturn: number | null = null;
     duration: number | null = null;
 
-    constructor(private investmentCalculatorService: InvestmentCalculatorService) {
+    constructor(private readonly investmentCalculatorService: InvestmentCalculatorService) {
     }
 
     onSubmit() {

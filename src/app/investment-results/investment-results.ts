@@ -13,7 +13,7 @@ import {EmptyResults} from "../empty-results/empty-results";
     styleUrl: './investment-results.css',
 })
 export class InvestmentResults {
-    constructor(private investmentCalculatorService: InvestmentCalculatorService) {
+    constructor(private readonly investmentCalculatorService: InvestmentCalculatorService) {
     }
 
     get investmentResultsData() {
