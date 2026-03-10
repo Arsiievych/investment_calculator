@@ -12,15 +12,15 @@
             </tr>
             </thead>
             <tbody>
-            @for (row of investmentResults; track row.year) {
-                <tr>
-                    <td>{{row.year}}</td>
-                    <td class="num">${{ row.investedCapital.toFixed(2) }}</td>
-                    <td class="num">${{ row.investmentValue.toFixed(2) }}</td>
-                    <td class="num">${{ row.interestYear.toFixed(2) }}</td>
-                    <td class="num">${{ row.totalInterest.toFixed(2) }}</td>
-                </tr>
-            }
+                @for (row of investmentResults; track row.year) {
+                    <tr>
+                        <td>{{ row.year }}</td>
+                        <td class="num">{{ row.investedCapital | currency }}</td>
+                        <td class="num">{{ row.investmentValue | currency }}</td>
+                        <td class="num">{{ row.interestYear | currency }}</td>
+                        <td class="num">{{ row.totalInterest| currency }}</td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>

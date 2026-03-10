@@ -1,9 +1,12 @@
 import {Component, Input} from '@angular/core';
 import {InvestmentOutputModelArray} from "./investment-output.model";
+import {CurrencyPipe} from "@angular/common";
 
 @Component({
   selector: 'app-investment-results',
-  imports: [],
+  imports: [
+    CurrencyPipe
+  ],
   templateUrl: './investment-results.html',
   styleUrl: './investment-results.css',
 })
